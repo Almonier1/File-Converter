@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>PDF to Excel Converter</h2>
+
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
+<form action="/convert" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    
+    <label for="convert_to">Convert to:</label>
+    <select name="convert_to" id="convert_to" required>
+        <option value="excel">Excel</option>
+        <option value="word">Word</option>
+        <option value="pdf">PDF</option>
+        <option value="csv">CSV</option>
+        <option value="image">Image</option>
+    </select>
+    
+    <button type="submit">Convert</button>
+</form>
+<option value="pdf_to_images">PDF → Images (ZIP)</option>
